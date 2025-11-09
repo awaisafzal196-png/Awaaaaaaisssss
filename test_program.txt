@@ -6,7 +6,7 @@ start {
     score <- "Match Started!";
     bowl score;
 
-    over (runs < 100) {
+    over (runs < 110) {
         bowl "Batting...";
         runs <- runs + 10;
     }
