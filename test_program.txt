@@ -1,0 +1,24 @@
+start {
+
+    player score;
+    player runs;
+
+    score <- "Match Started!";
+    bowl score;
+
+    over (runs < 100) {
+        bowl "Batting...";
+        runs <- runs + 10;
+    }
+
+    catch (runs >= 100) {
+        bowl "Century!";
+    }
+    noball {
+        bowl "Try again next over!";
+    }
+
+    wicket;
+
+    return to pavilion 0;
+}
